@@ -10,9 +10,16 @@ define('WEB_ROOT', substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NA
 define('ROOT_PATH', realpath(dirname(__FILE__) . '/../'));
 // defines the cms path
 define('CMS_PATH', ROOT_PATH . '/lib/base/');
+// defines the vendor path
+define('VENDOR_PATH', ROOT_PATH . '/lib/vendor/');
 
+// Set a session variable
+$_SESSION['db_type'] = 'json';
 // starts the session
 session_start();
+
+// This path should point to Composer's autoloader
+//require VENDOR_PATH.'autoload.php';
 
 // includes the system routes. Define your own routes in this file
 include(ROOT_PATH . '/config/routes.php');

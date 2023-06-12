@@ -1,0 +1,16 @@
+{
+    "name": "dream_dev_team/todo_app",
+    "description": "Fullstack PHP - Sprint 3 - Developers Team - ToDo app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Joana, Peterson, Eduard"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.15"
+    },
+    "config": {
+        "vendor-dir": "../lib/vendor"
+    }
+}

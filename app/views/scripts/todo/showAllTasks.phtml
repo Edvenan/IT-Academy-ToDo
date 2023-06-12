@@ -1,0 +1,133 @@
+<?php include('partials/header.phtml') ?>
+<!--------------------------------------->
+
+<!-- Body -->
+<div class="body-container flex-grow bg-gray-200 p-2 mb-1">
+    <!-- Your content here -->
+
+    <table class=" flex-col w-full text-sm text-left text-gray-500 ">
+                        <!-- replaced mb-16 by mb-24' -->
+        <thead class="text-xs text-gray-700 uppercase shadow-pink-500 bg-pink-500 align-middle ">
+            <!-- removed 'sticky' 'top-0' -->
+            <tr>
+                <th scope="col" class="px-2 py-3 text-left text-white ">
+                    <div class="inline-flex items-center">
+                        <a> Task Name</a>
+                        <a  href="sort?sortBy=name,asc" class=" text-white-800 font-bold  hover:text-violet-700 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                            </svg>
+                        </a>
+                        <a href="sort?sortBy=name,desc" class="text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </th>
+
+                <th scope="col" class="px-1 py-3 text-left  text-white">
+                    <div class="inline-flex items-center">
+                        <a> Status</a>
+                        <a  href="sort?sortBy=status,asc" class=" text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                            </svg>
+                        </a>
+                        <a href="sort?sortBy=status,desc" class="text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </th>
+                <th scope="col" class="px-1 py-3 text-left text-white">
+                    <div class="inline-flex items-center">
+                        <a> Start</a>
+                        <a  href="sort?sortBy=start_time,asc" class=" text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                            </svg>
+                        </a>
+                        <a href="sort?sortBy=start_time,desc" class="text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </th>
+                <th scope="col" class="px-1 py-3 text-left text-white">
+                    <div class="inline-flex items-center">
+                        <a> End</a>
+                        <a  href="sort?sortBy=end_time,asc" class=" text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                            </svg>
+                        </a>
+                        <a href="sort?sortBy=end_time,desc" class="text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </th>
+                <th scope="col" class="px-1 py-3 text-left text-white">
+                    <div class="inline-flex items-center">
+                        <a> Task Author</a>
+                        <a  href="sort?sortBy=author,asc" class=" text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                            </svg>
+                        </a>
+                        <a href="sort?sortBy=author,desc" class="text-white-800 font-bold  hover:text-violet-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </th>
+                <th scope="col" class=" text-white">
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($this->tasks as $task): ?>
+                <tr class="bg-white border border-pink-500 ">
+                    <td scope="row" class="px-2 py-3 font-medium text-gray-900 ">
+                        <?php echo $task['name']; ?>
+                    </td>
+                    <td class="px-1 py-3 text-left">
+                        <?php echo $task['status']; ?>
+                    </td>
+                    <td class="px-1 py-3 text-left">
+                        <?php echo $task['start_time']; ?>
+                    </td>
+                    <td class="px-1 py-3 text-left">
+                        <?php echo $task['end_time']; ?>
+                    </td>
+                    <td class="px-1 py-3 text-left">
+                        <?php echo $task['author']; ?>
+                    </td>
+                    <td class="flex-wrap text-center">
+                        <a href="showTask?id=<?php echo $task['id']; ?>" class="  mr-1 px-3 inline bg-green-500 hover:bg-gray-700 text-white font-medium rounded-lg text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-1/3">
+                            View
+                        </a>
+
+                        <a href="update?id=<?php echo $task['id']; ?>" class="  mr-1 px-1 inline bg-blue-500 hover:bg-gray-700 text-white font-medium rounded-lg text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-1/3">
+                            Update
+                        </a>
+
+                        <a href="delete?id=<?php echo $task['id']; ?>" class="  px-2 inline text-white bg-red-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-1/3 ">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</div>
+<!-- Your footer content here -->
+
+<?php include('partials/footer.phtml') ?>

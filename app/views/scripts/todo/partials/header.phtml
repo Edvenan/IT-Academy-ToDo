@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo WEB_ROOT."/stylesheets/styles.css"; ?>" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+            },
+          },
+          corePlugins: {
+          },
+        };
+  </script>
+  
+  <title>ToDo App!</title>
+
+</head>
+<body class="flex flex-col min-h-screen bg-gray-200">
+  <!-- Header -->
+  <header class="header bg-gray-200 pr-2 pl-2 pt-2  justify-center fixed w-full top-0">
+    <div class="flex items-center h-20 w-full bg-pink-500 ">
+      
+                <a href="<?php echo WEB_ROOT; ?>" class="flex items-center justify-start ">
+                <img src="./images/task-list.svg" class=" w-12 ml-2" alt="logo">
+                <span class=" text-l font-semibold hover:text-violet-200 whitespace-nowrap text-white text-center justify-center ml-1">ToDo<br>App !</span>
+                </a>
+
+                <div class="flex flex-wrap justify-center uppercase px-1 mx-auto font-semibold font-heading text-sm">
+                    <div class="text-center  flex-grow justify-between m-1">
+                        <a class="  hover:text-white py-1 px-3 rounded-xl bg-pink-100 text-pink-700 hover:bg-pink-700" href="create">Add New Task</a>
+                    </div>
+                    <div class="text-center flex-grow justify-between m-1">
+                        <a class=" hover:text-white py-1 px-3 rounded-xl bg-pink-100 text-pink-700 hover:bg-pink-700" href="showAll">View all Tasks</a>
+                    </div>
+                </div>
+
+
+            <!-- SELECT button -->
+            <form class="flex flex-col justify-end items-center w-32 text-sm flex-nowrap mr-4" style="color:white" id="myForm" method="POST" action="showAll">
+                <select class="text-sm" data-te-select-init>
+                    <option <?php 
+                        if ($_SESSION['db_type'] == 'json') {echo 'data-te-select-icon="https://cdn.iconscout.com/icon/free/png-512/free-json-file-1-504451.png?f=avif&w=256"';}
+                        elseif ($_SESSION['db_type'] == 'mysql') {echo 'data-te-select-icon="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_mysql_icon_130379.png"';}
+                        elseif ($_SESSION['db_type'] == 'mongodb') {echo 'data-te-select-icon="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png"';}
+                       ?>>
+                       <?php 
+                        if ($_SESSION['db_type'] == 'json') {echo 'JSON';}
+                        elseif ($_SESSION['db_type'] == 'mysql') {echo 'MySQL';}
+                        elseif ($_SESSION['db_type'] == 'mongodb') {echo 'MongoDB';}
+                       ?> 
+                    </option>
+                </select>
+                <label data-te-select-label-ref style="color:white">Working DB: </label>
+
+            </form>
+
+    </div>
+  </header>
+  <div style="height:90px;" ></div>

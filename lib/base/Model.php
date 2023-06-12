@@ -26,12 +26,12 @@ class Model
 			array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
 		);
 		
-		$this->init();
+		$this->init($settings['database']['table']);
 	}
 	
-	public function init()
-	{
+	public function init($table){
 		
+		$this->_setTable($table);
 	}
 	
 	/**

@@ -1,0 +1,51 @@
+<?php include('partials/header.phtml') ?>
+
+<!--------------------------------------->
+<!-- Body -->
+<!-- <body class="pt-24 sm:pt-20 lg:pt-165 justify-end"> -->
+
+
+<div class="body-container mt-8 flex-grow bg-gray-200 p-2 mb-1 max-h-xs justify-center">
+     <div class="flex items-center justify-center">
+          <div class="w-full max-w-lg p-5 overflow-x-auto rounded-lg  shadow-xl rounded-lg shadow-xl max-w-auto shadow-pink-700 bg-gradient-to-br from-rose-100 via-rose-200 to-purple-300 bg-white ">
+
+               <div class="flex justify-center items-center">
+                    <h1 class="font-semibold tracking-light text-2xl text-4xl text-center mb-8 min-w-screen">View your task!</h1>
+               </div>
+               <form method="POST" action="">
+                    <div class="flex">   
+                    <label class="my-1 py-1  h-8 w-1/4" for="name" >Task Name</label>
+                    <input  class="my-1  h-8   w-2/3 rounded-lg" type="text" id="name" name="name" disabled value="<?php echo $this->task['name']; ?>">
+                    </div>
+                    <div class="flex">
+                         <label class="my-1 py-1 h-8 pr-2 w-1/4" for="status">Status </label>
+                         <input class="my-1  h-8 pb-2 w-2/3 rounded-lg" type="text" id="status" name="status" disabled
+                              value="<?php echo $this->task['status']; ?>">
+                    </div>
+                    <div class="flex">
+                         <label class="my-1 py-1 h-8 pr-2 w-1/4" for="start_time">Start</label>
+                         <input class="my-1  h-8 pb-2 w-2/3 rounded-lg" type="text" id="start-time" name="start_time" disabled
+                              value="<?php echo $this->task['start_time']; ?>">
+                         </input>
+                    </div>
+                    <div class="flex">
+                         <label class="my-1 py-1 h-8 pr-2 w-1/4" for="end_time">End</label>
+                         <input class="my-1  h-8 pb-2 w-2/3 rounded-lg" type="text" id="end-time" name="end_time" disabled
+                              value="<?php echo $this->task['end_time']; ?>">
+                         </input>
+                    </div>
+                    <div class="flex">
+                         <label class="my-1 py-1 h-8 pr-2 w-1/4" for="author">Author</label>
+                         <input class="my-1  h-8 pp-2 w-2/3 rounded-lg" type="text" id="author" name="author" disabled
+                              value="<?php echo $this->task['author']; ?>">
+                    </div>
+                    <br>
+               </form>
+               </div>
+     </div>
+</div>
+
+<!--------------------------------------->
+
+<!-- Your footer content here -->
+<?php include('partials/footer.phtml') ?>
